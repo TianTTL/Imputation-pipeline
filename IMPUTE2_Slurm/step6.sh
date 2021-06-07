@@ -39,13 +39,16 @@ for chr in {1..22}; do
         --geno ${missThreshold}\
         --hwe ${hweThreshold}\
         --make-bed\
-        --out ${workDir}/step6/${fileName}.hg19.noDuplicates.chr${chr}.phased.impute2.filter
+        --out ${workDir}/step6/${fileName}.hg19.noDuplicates.chr${chr}.phased.impute2.filter \
+        --allow-no-sex \
+        --allow-no-vars
 
      echo "${workDir}/step6/${fileName}.hg19.noDuplicates.chr${chr}.phased.impute2.filter" >> ${workDir}/step6/mergeList.txt
 done
 
 ${softwareDir}/plink \
-    --merge-list ${workDir}/step6/mergeList.txt\
-    --make-bed\
-    --out ${workDir}/step6/${fileName}.imputed\
-    --allow-no-sex
+    --merge-list ${workDir}/step6/mergeList.txt \
+    --make-bed \
+    --out ${workDir}/step6/${fileName}.imputed \
+    --allow-no-sex \
+    --allow-no-vars

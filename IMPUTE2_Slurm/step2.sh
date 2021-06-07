@@ -41,5 +41,6 @@ for chr in {1..22}; do
     ${softwareDir}/plink\
         --bfile ${workDir}/step2/${fileName}.hg19.noDuplicates\
         --chr $chr --make-bed\
-        --out ${workDir}/step2/${fileName}.hg19.noDuplicates.chr${chr}
+        --out ${workDir}/step2/${fileName}.hg19.noDuplicates.chr${chr}\
+        --allow-no-vars
 done

@@ -51,7 +51,8 @@ for chr in $( seq ${startChr} ${endChr} ); do
                 --sample ${workDir}/step3/${fileNameCurrent}.sample \
                 --oxford-single-chr ${chr} \
                 --make-bed --out ${workDir}/step4/${fileNameCurrent}.chunk${chunk}.impute2 \
-                --allow-no-sex
+                --allow-no-sex \
+                --allow-no-vars
             fi
         fi
     done

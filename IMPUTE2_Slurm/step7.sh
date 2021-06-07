@@ -46,8 +46,9 @@ ${softwareDir}/plink \
   --bmerge ${workDir}/step7/${fileName}.origin.within\
   --make-bed\
   --merge-mode 2\
-  --out ${workDir}/step7/${fileName}.imputed.reattach\
-  --allow-no-sex
+  --out ${workDir}/step7/${fileName}.imputed.reattach \
+  --allow-no-sex \
+  --allow-no-vars
 
 # check the freq of result
 # ${softwareDir}/plink \

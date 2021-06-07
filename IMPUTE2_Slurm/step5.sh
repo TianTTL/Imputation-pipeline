@@ -25,7 +25,8 @@ for chr in {1..22}; do
         ${softwareDir}/plink \
             --merge-list ${workDir}/step5/fileNeedMergeChr${chr} \
             --make-bed --out ${workDir}/step5/${fileName}.hg19.noDuplicates.chr${chr}.phased.impute2 \
-            --allow-no-sex &
+            --allow-no-sex \
+            --allow-no-vars&
 done
 
 wait
